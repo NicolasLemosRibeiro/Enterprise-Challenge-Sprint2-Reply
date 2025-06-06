@@ -10,7 +10,7 @@ dados_monitor = {
 }
 
 df_print = pd.DataFrame(dados_monitor)
-df_print.to_csv("dados/dados_monitor_serial.csv", index=False)
+df_print.to_csv("dados_monitor_serial.csv", index=False)
 
 # Gráfico de barras
 df_plot = df_print.set_index("Horário")
@@ -20,5 +20,5 @@ plt.xlabel("Horário")
 plt.ylabel("Valor")
 plt.legend(title="Sensor")
 plt.tight_layout()
-plt.savefig("dados/grafico_monitor_serial.png")
+plt.savefig("grafico_monitor_serial.png")
 plt.show()
