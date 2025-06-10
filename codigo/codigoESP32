@@ -1,0 +1,33 @@
+#include "DHT.h"
+
+#define DHTPIN 15        
+#define DHTTYPE DHT22
+#define LDRPIN 34        
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+  delay(2000); 
+}
+
+void loop() {
+  float temperatura = dht.readTemperature();
+  float umidade = dht.readHumidity();
+  int luminosidade = analogRead(LDRPIN);
+
+  if (isnan(temperatura) || isnan(umidade)) {
+    Serial.println("Erro na leitura do DHT22");
+    return;
+  }
+
+  Serial.print("Temperatura: ");
+  Serial.print(temperatura);
+  Serial.print(" °C | Umidade: ");
+  Serial.print(umidade);
+  Serial.print(" % | Luminosidade (LDR): ");
+  Serial.println(luminosidade);
+
+  delay(5000); 
+}
