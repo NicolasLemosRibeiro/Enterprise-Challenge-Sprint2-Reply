@@ -34,8 +34,8 @@ Simular um sistema de coleta de dados para ambientes industriais utilizando ESP3
 
 ## 💻 Código-Fonte
 
-- Código do ESP32: [`codigo/codigoESP32.ino`](codigo/codigoESP32.ino)
-- Script Python para gerar o gráfico: [`scripts/codigoGraficoPython.py`](codigo/codigoGraficoPython.py)
+- Código do ESP32: [`codigo/codigoESP32.ino`](codigo/codigoESP32)
+- Script Python para gerar o gráfico: [`scripts/codigoGraficoPython.py`](codigo/codigoGraficoPython)
 
 ---
 
